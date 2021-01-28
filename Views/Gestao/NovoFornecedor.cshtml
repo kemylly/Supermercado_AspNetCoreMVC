@@ -1,0 +1,24 @@
+@model supermercado.DTO.FornecedorDTO
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<h2>Novo fornecedor</h2>
+<hr/>
+<form class="form-horizontal" asp-controller="Fornecedores" asp-action="Salvar" method="POST">
+    <input type="hidden" asp-for="Id" value="0">
+
+    <label asp-for="Nome">Nome</label>
+    <input type="text" asp-for="Nome" class="form-control" placeholder="Nome do fornecedor"><br>
+    <span asp-validation-for="Nome"></span>
+
+     <label asp-for="Email">Email</label>
+    <input type="text" asp-for="Email" class="form-control" placeholder="email@dofornecedor.com"><br>
+    <span asp-validation-for="Email"></span>
+
+     <label asp-for="Telefone">Telefone</label>
+    <input type="text" asp-for="Telefone" class="form-control" placeholder="11 1 94603-4206"><br>
+    <span asp-validation-for="Telefone"></span>
+
+    <button class="btn btn-success">Cadastrar</button>
+</form>
